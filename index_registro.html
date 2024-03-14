@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Titulo de la página-->
+
+    <title>Login - Mi Club</title>
+    <link rel="icon" type="image/logo" href="imagenes/logo.jpg">
+
+    <!--Estilo-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <!-- Barra de navegacion -->
+
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img class="logo rounded-circle" src="imagenes/logo.png" width="50" alt="Logo de la página web">
+      </div>
+      <div class="nav-links">
+        <div class="nav-inicio">
+          <a class="c-inicio" href="inicio">Inicio</a>
+        </div>
+        <div class="nav-contacto">
+          <a class="c-contacto" href="contacto">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenedor para iniciar sesión -->
+    <div class="background-image-container"></div>
+
+      <div class="container">
+
+        <h1>Inicio de sesión</h1>
+
+        <form action="/login" method="post">
+
+          <div class="input-field">
+            <label for="username">Correo Institucional:</label>
+            <input type="text" id="correo" name="correo" placeholder="Ingrese su correo institucional">
+          </div>
+
+          <div class="input-field">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+          </div>
+
+          <button type="submit">Iniciar sesión</button>
+          
+          <div class="input-registro">
+            <label for="registro">Aún no tienes cuenta? </label>
+            <a class="registro_new" href="registro">Registrate </a>
+          </div>
+
+        </form>
+
+        <p class="error-message" hidden>Correo o contraseña incorrectos.</p>
+      
+      </div>
+
+    </div>
+    <!-- Pie de pagina -->
+
+
+
+
+  </body>
+
+
+</html>
