@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Clubes de la Ucaribe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</head>
+
+<body>
+    <h1>Gestor de Clubes de la Ucaribe</h1>
+
+    <div class="datos-recuadro">
+    
+        <form action="/guardar_proyecto" method="post">
+            <div id="mensaje-incompleto" style="display: none; color: red;">
+                Por favor, rellena todos los campos del formulario antes de guardar.
+            </div>
+        
+            <label for="nombre">Nombre del club:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="descripcion">Actividades:</label><br>
+            <textarea id="descripcion" name="descripcion"></textarea><br>
+            <label for="propietario">Lider:</label><br>
+            <input type="text" id="propietario" name="propietario"><br>
+            <label for="fecha_fin_prevista">Fecha de inicio de actividades:</label><br>
+            <input type="date" id="fecha_fin_prevista" name="fecha_fin_prevista"><br>
+            <label for="fecha_fin_real">Fecha de finalización:</label><br>
+            <input type="date" id="fecha_fin_real" name="fecha_fin_real"><br>
+            <button type="submit">Guardar</button>
+            <a href="{{ url_for('ver_proyectos') }}" class="ver-btn">Ver actividades</a>
+
+        </form>
+        
+
+    {% if guardado %}
+        <div class="mensaje-guardado">¡El proyecto se ha guardado correctamente!</div>
+    {% endif %}
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Proyecto</title>
+</head>
+<body>
+    <h1>Información del Proyecto</h1>
+    <p>Nombre: {{ proyecto.nombre }}</p>
+    <p>Descripción: {{ proyecto.descripcion }}</p>
+    <p>Propietario: {{ proyecto.propietario }}</p>
+    <p>Fecha de finalización prevista: {{ proyecto.fecha_fin_prevista }}</p>
+    <p>Duración: {{ proyecto.duracion }} días</p>
+    <p>Fecha de finalización real: {{ proyecto.fecha_fin_real }}</p>
+    <a href="{{ url_for('index') }}">Regresar a la página principal</a>
+</body>
+</html>

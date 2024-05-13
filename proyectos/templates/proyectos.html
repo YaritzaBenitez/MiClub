@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de actividades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Lista de actividades</h1>
+
+    <ul>
+        {% for proyecto in proyectos %}
+        <li>
+            <div class="datos-recuadro" id="{{ proyecto.nombre }}"> <!-- Agrega el id con el nombre del proyecto -->
+                <h2>{{ proyecto.nombre }}</h2>
+                <p><strong>Actividades:</strong> {{ proyecto.descripcion }}</p>
+                <p><strong>Lider:</strong> {{ proyecto.propietario }}</p>
+                <p><strong>Fecha de inicio de actividades:</strong> {{ proyecto.fecha_fin_prevista }}</p>
+                <p><strong>Fecha de finalización:</strong> {{ proyecto.fecha_fin_real }}</p> <!-- Agrega esta línea -->
+                <form class="eliminar-formulario" action="/eliminar_proyecto/{{ proyecto.nombre }}" method="post">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Volver al Inicio</a>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Agregar evento submit a cada formulario de eliminación
+        document.querySelectorAll('.eliminar-formulario').forEach(form => {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar el envío del formulario
+
+                // Obtener el id del recuadro
+                const recuadroId = this.parentNode.id;
+
+                // Enviar el formulario
+                fetch(this.action, {
+                    method: 'POST',
+                    body: JSON.stringify({ id: recuadroId }), // Envía el id del recuadro como parte del cuerpo
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(() => {
+                    // Redirigir a la página de proyectos después de eliminar el proyecto
+                    window.location.href = '/proyectos';
+                }).catch(error => {
+                    console.error('Error al eliminar proyecto:', error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

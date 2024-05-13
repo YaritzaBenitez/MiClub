@@ -1,0 +1,112 @@
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    font-family: Arial, sans-serif;
+    color: #333; /* Color de texto gris oscuro */
+}
+
+.container {
+    background-color: #e4b1ed; /* Color de fondo del contenedor */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #6A1B9A ; /* Color gris oscuro para el título */
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Color gris oscuro para las etiquetas */
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #BA68C8; /* Color de fondo para los botones */
+    color: #fff; /* Color de texto blanco */
+    padding: 12px 24px; /* Tamaño de los botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7B1FA2; /* Color más oscuro al pasar el ratón */
+}
+
+.mensaje-guardado {
+    background-color: #E1BEE7; /* Fondo del mensaje de guardado */
+    color: #333; /* Texto en color gris oscuro */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff; /* Fondo del color deseado para cada elemento de la lista */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+a {
+    color: #333; /* Color gris oscuro para los enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el recuadro de los datos */
+.datos-recuadro {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-color: #ebd2f0; /* Color del recuadro de datos */
+}
+
+
+.ver-btn {
+    background-color: #BA68C8; /* Color de fondo para el botón Ver */
+    color: #fff; /* Texto en color blanco */
+    padding: 12px 24px; /* Tamaño de los botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; 
+}
+
+
+li .datos-recuadro {
+    background-color: #ebd2f0; /* Fondo del recuadro más grande en la lista de actividades */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
